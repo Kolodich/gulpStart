@@ -1,0 +1,9 @@
+// Global
+@import "../../../global";
+
+// Code
+.wrapper{
+  max-width: $wrapper-max-width;
+  padding: $wrapper-side-padding;
+  margin: 0 auto;
+}

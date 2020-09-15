@@ -1,0 +1,33 @@
+// Main global scss code
+@import "../../../global";
+
+// Root, html and body
+:root{
+ @include root;
+}
+html{
+ 
+}
+body{
+
+}
+
+// Global code
+@import "../../../modules/common/reset.scss";
+@import "../../../modules/blocks/footer/footer";
+@import "../../../modules/blocks/header/header";
+@import "../../../modules/blocks/main/main";
+@import "../../../modules/blocks/nav/nav";
+@import "../../../modules/blocks/wrapper/wrapper";
+
+// Blocks
+
+// Costom code
+p{
+ font-size: 20px;
+ font-family: var(--major-fonts);
+}
+img{
+ width: 300px;
+ height: 200px;
+}
