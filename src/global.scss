@@ -1,0 +1,68 @@
+// Variables
+$breakpoint-xs: 0;
+$breakpoint-sm: 576px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 992px;
+$breakpoint-xl: 1200px;
+
+// Mixins
+@mixin root {
+ :root{
+  // Colors
+  --blue: #007bff;
+  --purple: #6f42c1;
+  --pink: #e83e8c;
+  --red: #dc3545;
+  --orange: #fd7e14;
+  --yellow: #ffc107;
+  --green: #28a745;
+  --cyan: #17a2b8;
+  --white: #fff;
+  --gray: #6c757d;
+  --gray-dark: #343a40;
+  --black: #000;
+  --primary: #007bff;
+  --secondary: #6c757d;
+  --light: #f8f9fa;
+  --dark: #343a40;
+  // Fonts
+  font-size: 10px;
+  --major-fonts: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  --minor-fonts: 'Times New Roman', Times, serif;
+  --majot-font-color: var(--black);
+  --minor-font-color: var(--white);
+  // Transitions
+  --major-transition: 0.2s ease;
+  --minor-transition: 0.4s ease-in-out;
+  // Breakpoints
+  --breakpoint-xs: #{$breakpoint-xs};
+  --breakpoint-sm: #{$breakpoint-sm};
+  --breakpoint-md: #{$breakpoint-md};
+  --breakpoint-lg: #{$breakpoint-lg};
+  --breakpoint-xl: #{$breakpoint-xl};
+ }
+}
+
+@mixin media-xl {
+ @media screen and (max-width: $breakpoint-xl){
+  @content;
+ }
+}
+
+@mixin media-lg {
+ @media screen and (max-width: $breakpoint-xl){
+  @content;
+ }
+}
+
+@mixin media-md {
+ @media screen and (max-width: $breakpoint-md){
+  @content;
+ }
+}
+
+@mixin media-sm {
+ @media screen and (max-width: $breakpoint-sm){
+  @content;
+ }
+}

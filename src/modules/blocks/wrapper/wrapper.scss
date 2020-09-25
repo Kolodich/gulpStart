@@ -1,9 +1,32 @@
-// Global
-@import "../../../global";
+// Global code
+@import "../../../global.scss";
 
-// Code
+// "wrapper" variables 
+$max-width-xl: var(--breakpoint-lg);
+$max-width-lg: var(--breakpoint-md);
+$max-width-md: var(--breakpoint-sm);
+$max-width-sm: none;
+
+// "wrapper" mixins 
+
+// "wrapper" code
 .wrapper{
-  max-width: $wrapper-max-width;
-  padding: $wrapper-side-padding;
+  box-sizing: border-box;
   margin: 0 auto;
-}
+  padding: 0 15px;
+  height: auto;
+  max-width: 1180px;
+  @include media-xl{
+    max-width: var(--breakpoint-lg);
+  }
+  @include media-lg{
+    max-width: var(--breakpoint-md);
+  }
+  @include media-md{
+    max-width: var(--breakpoint-sm);
+  }
+  @include media-sm{
+    width: auto;
+    max-width: $max-width-sm;
+  }
+};

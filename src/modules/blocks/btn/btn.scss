@@ -1,0 +1,19 @@
+// Global code
+@import "../../../global.scss";
+
+// "btn" variables 
+
+// "btn" mixins 
+
+// "btn" code
+.btn{
+ &:focus{
+  outline: none;
+  text-decoration: none;
+ }
+ &_theme{
+  &_primary{
+
+  }
+ }
+}

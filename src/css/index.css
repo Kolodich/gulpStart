@@ -1,0 +1,197 @@
+:root {
+  font-size: 10px;
+  --blue: #007bff;
+  --purple: #6f42c1;
+  --pink: #e83e8c;
+  --red: #dc3545;
+  --orange: #fd7e14;
+  --yellow: #ffc107;
+  --green: #28a745;
+  --cyan: #17a2b8;
+  --white: #fff;
+  --gray: #6c757d;
+  --gray-dark: #343a40;
+  --black: #000;
+  --primary: #007bff;
+  --secondary: #6c757d;
+  --light: #f8f9fa;
+  --dark: #343a40;
+  --major-fonts: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  --minor-fonts: 'Times New Roman', Times, serif;
+  --major-transition: 0.2s ease;
+  --minor-transition: 0.4s ease-in-out;
+  --breakpoint-xs: 0;
+  --breakpoint-sm: 576px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 992px;
+  --breakpoint-xl: 1200px;
+}
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.wrapper {
+  box-sizing: border-box;
+  margin: 0 auto;
+  padding: 0 15px;
+  height: auto;
+  max-width: 1180px;
+}
+
+@media screen and (max-width: 1200px) {
+  .wrapper {
+    max-width: var(--breakpoint-lg);
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .wrapper {
+    max-width: var(--breakpoint-md);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .wrapper {
+    max-width: var(--breakpoint-sm);
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .wrapper {
+    width: auto;
+    max-width: none;
+  }
+}
+
+.btn:focus {
+  outline: none;
+  text-decoration: none;
+}
