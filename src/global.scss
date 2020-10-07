@@ -1,45 +1,43 @@
 // Variables
-$breakpoint-xs: 0;
 $breakpoint-sm: 576px;
 $breakpoint-md: 768px;
 $breakpoint-lg: 992px;
 $breakpoint-xl: 1200px;
 
 // Mixins
-@mixin root {
+@mixin root{
  :root{
-  // Colors
-  --blue: #007bff;
-  --purple: #6f42c1;
-  --pink: #e83e8c;
-  --red: #dc3545;
-  --orange: #fd7e14;
-  --yellow: #ffc107;
+  --pink: #FFC0CB;
+  --red: #f73c4f;
+  --orange: #e59c24;
+  --yellow: #fff707;
+  --khaki: #f0e68c;
   --green: #28a745;
-  --cyan: #17a2b8;
+  --pine: #01796f;
+  --cyan: #37B6CE; 
+  --light-blue: #72b5fd;
+  --blue: #0475ee;
+  --purple: #6f42c1;
+  --indigo: 	#4B0082;
   --white: #fff;
-  --gray: #6c757d;
-  --gray-dark: #343a40;
+  --gray: #ccc;
+  --dark-gray: #959595;
+  --dark: #333;
   --black: #000;
-  --primary: #007bff;
-  --secondary: #6c757d;
-  --light: #f8f9fa;
-  --dark: #343a40;
-  // Fonts
+  --primary: #574DD8;
+  --secondary: #A93CD4;
+  color: #333;
+  --gradient: linear-gradient(45deg, var(--cyan) 0%, var(--primary) 50%, var(--secondary) 100%);
+  --breakpoint-sm: $breakpoint-sm;
+  --breakpoint-md: $breakpoint-md;
+  --breakpoint-lg: $breakpoint-lg;
+  --breakpoint-xl: $breakpoint-xl;
+  line-height: 1.5;
   font-size: 10px;
-  --major-fonts: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  --minor-fonts: 'Times New Roman', Times, serif;
-  --majot-font-color: var(--black);
-  --minor-font-color: var(--white);
-  // Transitions
-  --major-transition: 0.2s ease;
-  --minor-transition: 0.4s ease-in-out;
-  // Breakpoints
-  --breakpoint-xs: #{$breakpoint-xs};
-  --breakpoint-sm: #{$breakpoint-sm};
-  --breakpoint-md: #{$breakpoint-md};
-  --breakpoint-lg: #{$breakpoint-lg};
-  --breakpoint-xl: #{$breakpoint-xl};
+  --fonts-minor: 'Times New Roman', Times, serif;
+  --fonts-major: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  --transition-major: 0.2s all ease-in-out;
+  --transition-minor: 0.4s all ease;
  }
 }
 
@@ -50,7 +48,7 @@ $breakpoint-xl: 1200px;
 }
 
 @mixin media-lg {
- @media screen and (max-width: $breakpoint-xl){
+ @media screen and (max-width: $breakpoint-lg){
   @content;
  }
 }
@@ -65,4 +63,12 @@ $breakpoint-xl: 1200px;
  @media screen and (max-width: $breakpoint-sm){
   @content;
  }
+}
+
+// Functions
+@function calcFluidFontSize($f-min, $f-max, $v-min: 320, $v-max: 1920, $units: px) {
+ $k: ($f-max - $f-min)/($v-max - $v-min);
+ $b: $f-min - $k * $v-min;
+ $b: $b + $units;
+ @return calc( #{$k} * 100vw + #{$b} );
 }
